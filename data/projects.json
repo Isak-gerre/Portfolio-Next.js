@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "title": "Savery.ai",
+    "category": "Artificial intelligence network builder",
+    "description": "Savery is a platform for autonomous software development. It delivers high-quality end-to-end developed software. The Savery AI agent network handles end-to-end development.",
+    "headerImage": "/images/savery-logo.svg",
+    "tags": ["Next.js", "TypeScript", "Tailwind", "UX/UI", "Figma", "AI", "Shadcn", "GCP", "Docker"],
+    "layoutStyle": "row",
+    "imageAlignment": "left",
+    "url": "https://savery.ai"
+  },
+  {
+    "id": 2,
+    "title": "Solkoll",
+    "category": "CMS and document creator",
+    "description": "As the sole developer and maintainer of the application, I was responsible for designing and implementing intuitive user interfaces and innovative features, including interactive document functionality, a string layout builder, and PDF generation capabilities.",
+    "headerImage": "/images/solkoll-logo.svg",
+    "tags": ["Next.js", "TypeScript", "Material UI", "UX/UI", "Design", "AWS", "SST", "Intercom"],
+    "layoutStyle": "row",
+    "imageAlignment": "right",
+    "url": "https://solkoll.se"
+  },
+  {
+    "id": 3,
+    "title": "hivemalmo.se",
+    "category": "University Startup",
+    "description": "I created a dedicated webpage my start-up, HIVE Malmö, an organization run by students, for students. Our goal is to build strong bridges that bring together students and businesses, driving the industry forward collectively.",
+    "headerImage": "/images/Logo/colored.svg",
+    "tags": ["SvelteKit", "Firebase", "Express.js", "Node.js"],
+    "layoutStyle": "col",
+    "url": "https://hivemalmo.se"
+  },
+  {
+    "id": 4,
+    "title": "bingy.se",
+    "category": "School project",
+    "description": "I developed a dynamic web application that allows users to browse and create personalized lists of movies. The project aims to enhance the movie-watching experience by providing a convenient platform to discover new films.",
+    "headerImage": "/images/bingy-logo.svg",
+    "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    "layoutStyle": "col",
+    "url": "https://bingy.se"
+  },
+  {
+    "id": 5,
+    "title": "Pharty",
+    "category": "Party photo gallery",
+    "description": "For my daughter's birthday, I created a web application that allows guests to login and upload candid photos during the party. The photos are then displayed on a wall of photos, each along with a personalized message from the birthday girl.",
+    "headerImage": "/images/pharty-logo.svg",
+    "altImage": "/images/pharty.png",
+    "tags": ["Next.js", "TypeScript", "Tailwind", "UX/UI", "Shadcn", "SQL"],
+    "layoutStyle": "col",
+    "url": "https://github.com/Isak-gerre/Pharty-Party-Photo-Gallery"
+  }
+] 
