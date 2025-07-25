@@ -16,7 +16,7 @@ const cvData = [
       {
         id: 2,
         title: 'Frontend Developer',
-        company: 'Savery.ai',
+        company: 'Institutet för solenergikvalitet',
         date: '2023-2025',
         description: 'As a Frontend Developer at IFSEK, I oversee the development and maintenance of a sophisticated in-house Customer Relationship Management (CRM) and document management application. This role allows me to leverage my expertise in frontend development to craft user-centric and visually engaging web applications that meet and exceed client expectations. As the sole developer and maintainer of the application, I am responsible for designing and implementing intuitive user interfaces and innovative features, including interactive document functionality, a string layout builder, and PDF generation capabilities. Collaboration with the backend development team is a critical aspect of my role, ensuring seamless integration of frontend components with backend services and databases. This position has been instrumental in refining my skills in frontend development, problem-solving, and cross-functional collaboration. It has also provided opportunities to expand my expertise into backend development, enhancing my technical versatility. Through my contributions, I strive to deliver high-quality solutions that align with IFSEK’s mission of creating exceptional digital tools for its clients.',
       },
