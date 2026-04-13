@@ -1,0 +1,19 @@
+---
+description: Run production build after editing portfolio source code
+alwaysApply: true
+---
+
+# Build after changes
+
+After making substantive edits to application code (`components/`, `pages/`, `data/`, `styles/`, `public/`, Next/Tailwind config, or `scripts/` that affect output), run from the project root:
+
+```bash
+npm run build
+```
+
+before treating the task as done.
+
+- Run **once** at the end of a turn if you made several related edits; do not skip the build when the change could affect compilation or static export.
+- A build is **optional** for changes that cannot affect the app (e.g. only `.cursor/` rules or unrelated docs).
+
+For local development, you can run `npm run build:watch` to rebuild on file changes (debounced).

@@ -17,7 +17,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${poppins.variable} font-sans`}>
       <Head>
-        <title>Isak Gerre</title>
+        <title>Isak Gerre — Frontend Developer</title>
+        <meta name="author" content="Isak Gerre" />
       </Head>
       <Cursor />
       <Component {...pageProps} />

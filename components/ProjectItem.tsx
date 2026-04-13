@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Project } from '../types';
-import { LinkPreview } from './ui/link-preview';
 
 interface ProjectItemProps {
   project: Project;
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
-  const { title, category, description, headerImage, tags, layoutStyle, imageAlignment, url, altImage } = project;
+  const { title, category, tldr, description, headerImage, tags, layoutStyle, imageAlignment, slug } = project;
 
   const imageContent = (
     <div className="bg-custom-white rounded-2xl h-[375px] w-full flex items-center justify-center px-12">
@@ -19,25 +19,15 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
   const textContent = (
     <div className="flex flex-col gap-2">
       {category && <p className="text-sm font-bold text-custom-white">{category}</p>}
-      {altImage ? (
-      <LinkPreview
-          url={url}
-          imageSrc={altImage || headerImage}
-          isStatic
-          className="font-bold flex flex-row items-center gap-4"
-        >
+      <Link
+        href={`/projects/${slug}`}
+        className="font-bold flex flex-row items-center gap-4 group"
+      >
         <h2 className="text-[48px] font-bold text-custom-white underline">{title}</h2>
-         <Image src={"/images/arrow.svg"} alt={title} width={60} height={60} className="" />
-        </LinkPreview>
+        <Image src={"/images/arrow.svg"} alt={title} width={60} height={60} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+      </Link>
 
-      ) : <LinkPreview
-            url={url}
-          className="font-bold flex flex-row items-center gap-4"
-        >
-        <h2 className="text-[48px] font-bold text-custom-white underline">{title}</h2>
-        <Image src={"/images/arrow.svg"} alt={title} width={60} height={60} className="" />
-        </LinkPreview>}
-      
+      {tldr && <p className="text-custom-white !font-bold !text-[16px]">TL;DR — {tldr}</p>}
       <p className="text-custom-white !font-medium !text-[16px]">{description}</p>
       <hr className="my-4 border-custom-white" />
         <div className="flex flex-wrap gap-2 ">
@@ -52,10 +42,12 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
 
   if (layoutStyle === 'col') {
     return (
-        <div className="flex flex-col gap-4">
+      <Link href={`/projects/${slug}`} className="block">
+        <div className="flex flex-col gap-4 group">
             {imageContent}
             {textContent}
         </div>
+      </Link>
     )
   }
 
@@ -71,4 +63,4 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
   );
 };
 
-export default ProjectItem; 
+export default ProjectItem;

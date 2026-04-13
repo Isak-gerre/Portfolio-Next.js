@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 import Column from '../components/Column';
 import Home from '../components/Home';
 import Projects from '../components/Projects';
@@ -15,8 +17,16 @@ const columns = [
 ];
 
 export default function MainPage() {
+  const router = useRouter();
   const [activeColumn, setActiveColumn] = useState('home');
   const [showContent, setShowContent] = useState(true);
+
+  useEffect(() => {
+    const section = router.query.section;
+    if (typeof section === 'string' && columns.some(c => c.id === section)) {
+      setActiveColumn(section);
+    }
+  }, [router.query.section]);
 
   const handleColumnClick = (id: string) => {
     if (activeColumn !== id) {
@@ -34,6 +44,17 @@ export default function MainPage() {
 
   return (
     <div>
+      <Head>
+        <meta name="description" content="Isak Gerre is a multi-disciplinary frontend developer with 5+ years of experience building web applications with Next.js, TypeScript, and React. Based in Malmö, Sweden." />
+        <meta property="og:title" content="Isak Gerre — Frontend Developer" />
+        <meta property="og:description" content="Multi-disciplinary frontend developer with 5+ years of experience building web applications. Based in Malmö, Sweden." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://isakgerre.com" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Isak Gerre — Frontend Developer" />
+        <meta name="twitter:description" content="Multi-disciplinary frontend developer with 5+ years of experience building web applications." />
+        <link rel="canonical" href="https://isakgerre.com" />
+      </Head>
       <MobileMenu columns={columns} activeColumn={activeColumn} onColumnClick={handleColumnClick} />
       <div className="hidden md:flex w-screen h-screen">
         {columns.map(({ id, title, color, textColor, content }) => (

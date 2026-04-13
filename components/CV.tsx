@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { LinkPreview } from './ui/link-preview';
 
 const cvData = [
@@ -8,34 +9,45 @@ const cvData = [
     workExperience: [
       {
         id: 1,
-        title: 'Software Developer',
-        company: 'Savery.ai',
-        date: '2025-present',
-        description: 'Developing the savery.ai platform, a platform for managing, creating and using Artifical Intelligence Networks. As the sole developer, I am responsible for the maintenance and development of the frontend of the platform.',
+        title: 'Full stack developer',
+        company: 'Nimt.ai',
+        date: 'Aug 2025 - present',
+        projectSlug: 'nimt',
+        description: 'Led the frontend development of an AI search analytics platform that helps brands track their visibility, sentiment, and citations across major LLMs like ChatGPT, Perplexity, and Gemini. Took initiative to restructure the existing codebase upon joining, improving maintainability and laying a stronger foundation for future development. Drove a strong focus on user experience, ensuring complex AI-driven data - such as brand sentiment scores, source tracking, and cross-model visibility rankings - was presented in a clear and intuitive way. Spearheaded the full rebrand and rebuilt the marketing site from the ground up using Framer.',
       },
       {
         id: 2,
-        title: 'Frontend Developer',
-        company: 'Institutet för solenergikvalitet',
-        date: '2023-2025',
-        description: 'As a Frontend Developer at IFSEK, I oversee the development and maintenance of a sophisticated in-house Customer Relationship Management (CRM) and document management application. This role allows me to leverage my expertise in frontend development to craft user-centric and visually engaging web applications that meet and exceed client expectations. As the sole developer and maintainer of the application, I am responsible for designing and implementing intuitive user interfaces and innovative features, including interactive document functionality, a string layout builder, and PDF generation capabilities. Collaboration with the backend development team is a critical aspect of my role, ensuring seamless integration of frontend components with backend services and databases. This position has been instrumental in refining my skills in frontend development, problem-solving, and cross-functional collaboration. It has also provided opportunities to expand my expertise into backend development, enhancing my technical versatility. Through my contributions, I strive to deliver high-quality solutions that align with IFSEK’s mission of creating exceptional digital tools for its clients.',
+        title: 'Software Developer',
+        company: 'Savery.ai',
+        date: 'Jan 2025 - Aug 2025',
+        projectSlug: 'savery',
+        description: 'Spearheaded the development of an interactive AI Agent Network Creator with drag-and-drop UI for connecting and configuring AI agents. Enabled agent customization with model selection, user instructions, and integrated tools like Web Search, Terminal Access, and Task Manager. Led the frontend architecture, ensuring a visually engaging and highly maintainable interface. Collaborated with backend developers to ensure seamless system integration and smooth performance.',
       },
       {
         id: 3,
+        title: 'Frontend Developer',
+        company: 'Institutet för solenergikvalitet',
+        date: '2023-2025',
+        projectSlug: 'solkoll',
+        description: 'As a Frontend Developer at IFSEK, I oversee the development and maintenance of a sophisticated in-house Customer Relationship Management (CRM) and document management application. This role allows me to leverage my expertise in frontend development to craft user-centric and visually engaging web applications that meet and exceed client expectations. As the sole developer and maintainer of the application, I am responsible for designing and implementing intuitive user interfaces and innovative features, including interactive document functionality, a string layout builder, and PDF generation capabilities. Collaboration with the backend development team is a critical aspect of my role, ensuring seamless integration of frontend components with backend services and databases. This position has been instrumental in refining my skills in frontend development, problem-solving, and cross-functional collaboration. It has also provided opportunities to expand my expertise into backend development, enhancing my technical versatility. Through my contributions, I strive to deliver high-quality solutions that align with IFSEK’s mission of creating exceptional digital tools for its clients.',
+      },
+      {
+        id: 4,
         title: 'Internship',
         company: 'Sjöbergska Huset AB - Malmö',
         date: 'Jan 2023 - Jun 2023',
         description: 'During my internship at Sjöbergska, I had the valuable opportunity to engage directly with customers under the guidance and mentorship of Jens Grip. This experience not only honed my interpersonal and customer service skills but also deepened my understanding of effective client communication. Moreover, I had the privilege of developing an application using SvelteKit and Firebase. This project allowed me to leverage my technical expertise while gaining hands-on experience in modern web development frameworks and cloud-based technologies. By working on this application, I enhanced my proficiency in building robust and user-friendly web solutions.In addition, I contributed to the enhancement and redesign of Björn Lomborg\'s website using Drupal. Furthermore, I took on the responsibility of organizing and facilitating workshops to define and refine our project objectives. Through these workshops, I demonstrated my leadership abilities, effective communication skills, and the capacity to collaborate and guide a team towards achieving shared goals.',
       },
       {
-        id: 4,
+        id: 5,
         title: 'Project Manager and Web Developer',
         company: 'HIVE Malmö - Malmö',
         date: 'Jun 2022 - Jun 2023',
+        projectSlug: 'hivemalmo',
         description: 'As a Project Manager and Lead Web Developer for HIVE Malmö, I have been actively involved in developing and driving forward the HIVE Malmö project, in collaboration with my peers. The project\'s mission is to establish a stronger connection between students and the business community, and I have played a key role in its success. My responsibilities include overseeing project activities, coordinating with team members, and managing web development tasks to ensure the project\'s objectives are met. Through HIVE Malmö, we aim to create a vibrant platform that bridges the gap between academia and industry.',
       },
       {
-        id: 5,
+        id: 6,
         title: 'Amanuens - Teacher assistant',
         company: 'Malmö University - Malmö',
         date: 'Jan 2021 - Jun 2021 & Jan 2022 - Jun 2022',
@@ -147,7 +159,7 @@ const CV = () => {
   );
 };
 
-const Description = ({ title, company, date, description }: { title: string, company: string, date: string, description: string }) => {
+const Description = ({ title, company, date, description, projectSlug }: { title: string, company: string, date: string, description: string, projectSlug?: string }) => {
   return (
     <div>
       <h2 className="text-xl font-bold">{title}</h2>
@@ -157,6 +169,11 @@ const Description = ({ title, company, date, description }: { title: string, com
         <p className="text-md font-medium text-custom-white opacity-80">{date}</p>
         </div>
       <p className="!text-md text-custom-white !leading-relaxed">{description}</p>
+      {projectSlug && (
+        <Link href={`/projects/${projectSlug}`} className="text-custom-white font-bold underline text-sm mt-2 inline-block">
+          View project →
+        </Link>
+      )}
     </div>
   );
 };
