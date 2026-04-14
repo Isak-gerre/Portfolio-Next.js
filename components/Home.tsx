@@ -32,22 +32,22 @@ const Home = () => {
             </div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium !leading-tight">
           I'm <LinkPreview
-            url="https://savery.ai/"
+            url="https://nimt.ai/"
             isStatic
             imageSrc="/images/me.png"
           className="font-bold text-custom-blue "
         >
           Isak
-        </LinkPreview>, a multi-disciplinary developer with 5-years experience in frontend development. Currently developing saas-solution for <LinkPreview
-          url="https://savery.ai/"
+        </LinkPreview>, a multi-disciplinary full stack developer with 5-years experience. Currently full stack developer at <LinkPreview
+          url="https://nimt.ai/"
           className="font-bold text-custom-red "
         >
-          Savery.ai
+          Nimt.ai
         </LinkPreview>, previously at <LinkPreview
-          url="https://www.solenergikvalitet.se/"
+          url="https://savery.ai/"
           className="font-bold text-custom-yellow "
         >
-          Institutet för solenergikvalitet
+          Savery.ai
         </LinkPreview>.
         </h2>
         <hr className="my-8" />
@@ -85,7 +85,7 @@ const Home = () => {
         </div>
       </div>
       <footer className="absolute bottom-10 text-gray-400 w-full md:pr-[180px] flex flex-row justify-between">
-        <p className="md:text-sm text-xs">Based in Malmö, Sweden</p>
+        <p className="md:text-sm text-xs">Based in Helsingborg, Sweden</p>
         <p className="md:text-sm text-xs">Contact me at <a href="mailto:isak.gerre@gmail.com" className="text-custom-blue" target="_blank">isak.gerre@gmail.com</a></p>
         <p className="md:text-sm text-xs">LinkedIn: <a href="https://www.linkedin.com/in/isak-gerre-0754a5227/" className="text-custom-blue" target="_blank">Isak Gerre</a></p>
         <p className="md:text-sm text-xs">GitHub: <a href="https://github.com/Isak-gerre" className="text-custom-blue" target="_blank">isakgerre</a></p>

@@ -45,14 +45,14 @@ export default function MainPage() {
   return (
     <div>
       <Head>
-        <meta name="description" content="Isak Gerre is a multi-disciplinary frontend developer with 5+ years of experience building web applications with Next.js, TypeScript, and React. Based in Malmö, Sweden." />
-        <meta property="og:title" content="Isak Gerre — Frontend Developer" />
-        <meta property="og:description" content="Multi-disciplinary frontend developer with 5+ years of experience building web applications. Based in Malmö, Sweden." />
+        <meta name="description" content="Isak Gerre is a multi-disciplinary full stack developer with 5+ years of experience building web applications with Next.js, TypeScript, and React. Based in Helsingborg, Sweden." />
+        <meta property="og:title" content="Isak Gerre — Full Stack Developer" />
+        <meta property="og:description" content="Multi-disciplinary full stack developer with 5+ years of experience building web applications. Based in Helsingborg, Sweden." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://isakgerre.com" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Isak Gerre — Frontend Developer" />
-        <meta name="twitter:description" content="Multi-disciplinary frontend developer with 5+ years of experience building web applications." />
+        <meta name="twitter:title" content="Isak Gerre — Full Stack Developer" />
+        <meta name="twitter:description" content="Multi-disciplinary full stack developer with 5+ years of experience building web applications." />
         <link rel="canonical" href="https://isakgerre.com" />
       </Head>
       <MobileMenu columns={columns} activeColumn={activeColumn} onColumnClick={handleColumnClick} />

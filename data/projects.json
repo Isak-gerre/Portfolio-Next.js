@@ -65,7 +65,8 @@
     "images": [],
     "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     "layoutStyle": "col",
-    "url": "https://bingy.se"
+    "url": "https://bingy.se",
+    "visitable": true
   },
   {
     "id": 6,

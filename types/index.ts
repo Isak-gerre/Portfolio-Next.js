@@ -10,6 +10,7 @@ export interface Project {
     images?: string[];
     tags: string[];
     url: string;
+    visitable?: boolean;
     layoutStyle: 'row' | 'col';
     imageAlignment?: 'left' | 'right';
 } 
